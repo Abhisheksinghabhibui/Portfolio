@@ -33,6 +33,7 @@
 .main {
     background-color: #323946;
     width: 95vw;
+    height: 95vh;
     padding: 20px;
     color: #fff;
     margin-left: 15px;
@@ -414,7 +415,8 @@ p {
     }
 
     .devinfo {
-        font-size: 10px;
+        font-size: 1.1em;
+        margin-top: 270px;
     }
 
     .devpic {
@@ -491,13 +493,14 @@ p {
     }
 
     .devinfo {
-        font-size: 7px;
+        font-size: 10px;
+        margin-top: 200px;
     }
 
     .devpic {
         /* display: none; */
         height: 25vh;
-        margin-top: 75px;
+        margin-top: 110px;
     }
 
     .devpic img {
