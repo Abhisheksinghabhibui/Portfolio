@@ -15,18 +15,23 @@ document.querySelector('.hamburger').addEventListener("click", ()=>{
     }
 })
 
-// // function sendEmail(){
-//     console.log("hello");
-//     Email.send({
-//         Host : "smtp.elasticemail.com",
-//         Username : "singhabhisheklko315@gmail.com",
-//         Password : "6FAE6B21E0E94AE8DED726313AC7095EE24A",
-//         To : "singhabhisheklko315@gmail.com",
-//         From : "singhabhisheklko315@gmail.com",
-//         Subject : "portfolio enquiry",
-//         Body : "Name:" + document.getElementById("clientname").value + "<br> Email: " +document.getElementById("clientemail").value + "<br> phone no: " + document.getElementById("clientphone").value + "<br> Messages: " + document.getElementById("details").value + "<br> is client:" + document.getElementById("isclient").value
-//     }).then(
-//         message => alert("Query Submitted Succesfully")
-//     );
+function sendEmail(){
+    let name= document.getElementById("clientname").value;
+    let email= document.getElementById("clientemail").value;
+    let phone= document.getElementById("clientphone").value;
+    let details= document.getElementById("details").value;
+    let checkbox= document.getElementById("isclient").value;
+
+
+
+    Email.send({
+        SecureToken :"deba718d-f6f1-4510-a782-9d99f15b727c",
+        From : "singhabhisheklko315@gmail.com",
+        To : "singhabhisheklko315@gmail.com",
+        Subject : "Portfolio enquiry",
+        Body : "NAME:" + name + "<br> Email: " + email +"__"+"__"+ phone+ "__" + details + "__"+ checkbox
+    }).then(
+        message => alert("Query Submitted Succesfully")
+    );
    
-// }
+}
