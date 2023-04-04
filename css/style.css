@@ -1,0 +1,545 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.sidebar {
+    position: absolute;
+    background-color: #c8d3f3;
+    height: 100vh;
+    font-family: 'Fira Sans', sans-serif;
+    transition: transform 0.3s ease-in;
+}
+
+.sidebar nav {
+    padding: 45px;
+}
+
+.sidebar nav li {
+    list-style: none;
+    font-size: 30px;
+    padding: 33px 0px;
+}
+
+.sidebar nav li a {
+    text-decoration: none;
+    color: black;
+}
+
+.main {
+    background-color: #323946;
+    width: 95vw;
+    padding: 20px;
+    color: #fff;
+    margin-left: 15px;
+}
+
+.container {
+    display: flex;
+}
+
+.infocontainer {
+    /* background-color: rgb(223, 21, 155); */
+    width: 80vw;
+    height: 58vh;
+    margin: 144px auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.devinfo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Source Code Pro', monospace;
+    padding: 30px;
+    font-size: 16px;
+}
+
+.hello {
+    font-size: 3em;
+
+}
+
+.name {
+    font-size: 3em;
+    font-weight: bold;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.about {
+    font-size: 2.5em;
+}
+
+.moreabout {
+    font-size: 2.1em;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.buttons {
+    margin-top: 34px;
+    font-size: 16px;
+}
+
+.btn {
+    padding: 9px 14px;
+    border-radius: 22px;
+    color: white;
+    background-color: mediumblue;
+    font-weight: bold;
+    font-size: 2em;
+    margin: 3px 3px;
+    cursor: pointer;
+
+}
+
+.btn-sm {
+    font-size: 17px;
+    padding: 10px, 19px;
+    margin: 12px 0;
+}
+
+.btn:hover {
+    background-color: white;
+    color: dodgerblue;
+
+}
+
+.devpic {
+    height: 58vh
+}
+
+.devpic img {
+    height: 58vh;
+    animation-name: picanimate;
+    animation-duration: 2s;
+
+
+}
+
+@keyframes picanimate {
+    from {
+
+        height: 0;
+    }
+
+    to {
+        height: 100%;
+    }
+}
+
+.contactform {
+    padding: 0 34px;
+    padding-top: 144px;
+    font-family: 'Fira Sans', sans-serif;
+    margin: 0 88px;
+
+}
+
+.contactform h1 {
+    font-family: 'Source Code Pro', monospace;
+    /* padding: 12px 0; */
+}
+
+.contactform form div {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.contactform form div input {
+    /* width: 26vw; */
+    border-radius: 5px;
+    margin: 6px 0 0 0;
+    padding: 3px;
+}
+
+.contactform form {
+    margin: 0 40px;
+}
+
+#emailhelp {
+    font-size: 14px;
+    color: midnightblue;
+    margin: 0 5px;
+    padding: 3px 0 0 0;
+}
+
+#form-check {
+    flex-direction: row;
+}
+
+#form-check input {
+    width: 24px;
+    margin: 3px;
+}
+
+.certificationcontainer {
+    background-color: azure;
+    
+}
+
+.certificationcontainer h1 {
+    padding: 20px;
+    color: #fff;
+    background-color: blue;
+    font-style: oblique;
+}
+
+.certificationitem {
+    margin: 20px;
+    font-family: 'Fira Sans', sans-serif;
+    color: blue;
+
+
+}
+
+.certificationitem h4 {
+    line-height: 25px;
+    font-size: 18px;
+    color: rgb(189, 33, 33);
+}
+
+.certificationitem p {
+    color: black;
+}
+
+.certificationcontainer {
+    margin: 55px 8px;
+}
+
+h2 {
+    font-family: 'Fira Sans', sans-serif;
+
+}
+
+p {
+    font-family: 'Fira Sans', sans-serif;
+    margin: 12px 0;
+    line-height: 25px;
+}
+
+.intro {
+    margin: 0 88px;
+}
+
+.intro h2 {
+    font-family: 'Fira Sans', sans-serif;
+    margin: 12px;
+
+}
+
+.intro p {
+    font-family: 'Source Code Pro', monospace;
+    margin: 12px;
+}
+
+.skillcontainer {
+    padding: 12px;
+
+}
+
+.skillitem {
+    display: flex;
+    align-items: center;
+}
+
+.skill {
+    width: 230px;
+    height: 10px;
+    background-color: red;
+    border: 2px solid black;
+
+}
+
+.skills {
+    background-color: green;
+
+}
+
+.skills h1 {
+    display: flex;
+    justify-content: center;
+    color: orange;
+}
+
+.skillitem {
+    color: aliceblue;
+}
+
+.myintro {
+    background-color: #0ef;
+    color: #fff;
+    margin-top: 40px;
+
+
+}
+
+.myintro h1 {
+    display: flex;
+    justify-content: center;
+    color: blue;
+}
+
+.myintro p {
+    font-size: 25px;
+    margin: 20px 30px;
+    line-height: 50px;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.hundred {
+    width: 260px;
+    background-color: blueviolet;
+    animation-name: widthanimate;
+    animation-duration: 2s;
+}
+
+.seventyfive {
+    width: 195px;
+    background-color: yellow;
+    animation-name: widthanimate;
+    animation-duration: 2s;
+}
+
+.fifty {
+    width: 130px;
+    background-color: red;
+    animation-name: widthanimate;
+    animation-duration: 2s;
+}
+
+.t5 {
+    width: 65px;
+    background-color: yellow;
+    animation-name: widthanimate;
+    animation-duration: 2s;
+}
+
+@keyframes widthanimate {
+    from {
+        width: 10px;
+    }
+
+    to {
+        width: 200px;
+
+    }
+
+}
+
+.sidebarGo {
+    transform: translate(-443px, 0);
+    position: absolute;
+}
+
+.hamburger {
+    position: absolute;
+    cursor: pointer;
+    top: 10px;
+    left: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    /* border: #fff 4px solid; */
+    background-color: #c8d3f3;
+
+}
+.ham{
+    width: 50px;
+}
+
+.cross {
+    margin-left: 195px;
+    margin-top: 10px;
+    width: 50px;
+
+}
+
+.education {
+    margin: 55px 10px;
+
+    background-color: azure;
+    color: #fff;
+}
+
+.education h1 {
+    color: #fff;
+    /* border: 2px solid red; */
+    background-color: blue;
+}
+
+.educationinfo {
+    margin: 20px;
+    line-height: 40px;
+
+}
+
+.educationinfo h3 {
+    margin: 10px 0;
+    color: black;
+}
+
+.educationinfo h1 {
+    color: white;
+}
+.project{
+    margin-top: 80px;
+    background-color: rgb(240, 67, 15);
+}
+.projectitem{
+    /* background-color: #0ef; */
+    margin-top: 30px;
+    padding: 20px 20px;
+    font-size: 20px;
+}
+.projectitem h2{
+    background-color: rgb(128, 16, 255);
+}
+.projectitem .btn{
+    margin-top: 40px;
+}
+.portfoliodisclaimer{
+    margin-top: 30px;
+    background-color: rgb(255, 42, 4);
+    font-size: 18px;
+}
+
+@media (max-width:870px) {
+    .buttons {
+        font-size: 6px;
+    }
+
+    .devinfo {
+        font-size: 10px;
+    }
+
+    .devpic {
+        /* display: none; */
+        height: 25vh;
+        margin-top: 130px;
+    }
+
+    .devpic img {
+        height: 25vh;
+    }
+
+    .intro,
+    .blogcontainer,
+    .contactform {
+        margin: 8px;
+    }
+
+    .infocontainer {
+        margin: 0px auto;
+    }
+    .sidebar nav {
+        padding: 30px;
+    }
+    
+    .sidebar nav li {
+        list-style: none;
+        font-size: 20px;
+        padding: 23px 0px;
+    }
+    .ham{
+        width: 40px;
+    }
+    .cross {
+        margin-left: 115px;
+        margin-top: -10px;
+        width: 40px
+    
+    }
+    .intro{
+        padding: 40px 0;
+    }
+    .myintro p{
+        font-size: 20px;
+    }
+    .education{
+        margin: 60px 0;
+        font-size: 80%;
+    }
+    .certificationcontainer{
+        margin: 50px 0;
+        font-size: 80%;
+    }
+    .project{
+        margin: 60px 0;
+    }
+    .portfoliodisclaimer{
+        margin-top: 20px;
+        font-size: 14px;
+    }
+    .projectitem .btn{
+        margin-top: 30px;
+    }
+    .projectitem{
+        margin-top: 15px;
+        padding: 16px 16px;
+        font-size: 17px;
+    }
+}
+
+@media (max-width:480px) {
+    .buttons {
+        font-size: 6px;
+    }
+
+    .devinfo {
+        font-size: 7px;
+    }
+
+    .devpic {
+        /* display: none; */
+        height: 25vh;
+        margin-top: 75px;
+    }
+
+    .devpic img {
+        height: 25vh;
+    }
+
+    .intro,
+    .blogcontainer,
+    .contactform {
+        margin: 5px;
+    }
+    .sidebar nav {
+        padding: 40px 20px;
+    }
+    
+    .sidebar nav li {
+        list-style: none;
+        font-size: 17px;
+        padding: 28px 0px;
+    }
+    .cross {
+        margin-left: 70px;
+        margin-top: 10px;
+        width: 35px;
+    
+    }
+    .ham{
+        width: 35px;
+    }
+    .myintro p{
+        font-size: 15px;
+    }
+    .portfoliodisclaimer{
+        margin-top: 20px;
+        font-size: 10px;
+    }
+    .projectitem .btn{
+        margin-top: 20px;
+    }
+    .projectitem{
+        margin-top: 10px;
+        padding: 14px;
+        font-size: 14px;
+    }
+}
