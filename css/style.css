@@ -48,7 +48,7 @@
     /* background-color: rgb(223, 21, 155); */
     width: 80vw;
     height: 100%;
-    margin: 145px auto;
+    margin: 144px auto;
     display: flex;
     justify-content: space-around;
 }
@@ -422,12 +422,12 @@ p {
 
     .devpic {
         /* display: none; */
-        height: 25vh;
-        margin-top: 130px;
+        height: 35vh;
+        margin-top: 320px;
     }
 
     .devpic img {
-        height: 25vh;
+        height: 35vh;
     }
 
     .intro,
@@ -495,17 +495,17 @@ p {
 
     .devinfo {
         font-size: 10px;
-        margin-top: 200px;
+        margin-top: 80px;
     }
 
     .devpic {
         /* display: none; */
-        height: 25vh;
+        height: 27vh;
         margin-top: 110px;
     }
 
     .devpic img {
-        height: 25vh;
+        height: 27vh;
     }
 
     .intro,
