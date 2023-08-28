@@ -309,7 +309,7 @@ p {
 }
 .eighty {
     width: 225px;
-    background-color: rgb(8, 233, 222);
+    background-color: white;
     animation-name: widthanimate;
     animation-duration: 2s;
 }
