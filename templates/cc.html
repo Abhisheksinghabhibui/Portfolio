@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        IF lv_current_ebeln <> ls_data-ebeln.
+        " Display subtotal
+        WRITE: / 'Subtotal', 80 lv_subtotal_menge, 100 ls_data-meins, 120 lv_subtotal_netpr.
+        ULINE.
+        CLEAR: lv_subtotal_menge, lv_subtotal_netpr.
+        lv_current_ebeln = ls_data-ebeln.
+      ENDIF.
+
+      WRITE: / ls_data-ebeln, 20 ls_data-bukrs, 40 ls_data-bedat, 60 ls_data-ernam, 80 ls_data-menge, 100 ls_data-meins, 120 ls_data-netpr.
+      lv_subtotal_menge = lv_subtotal_menge + ls_data-menge.
+      lv_subtotal_netpr = lv_subtotal_netpr + ls_data-netpr.
+    ENDLOOP.
+
+    " Display final subtotal
+    WRITE: / 'Subtotal', 80 lv_subtotal_menge, 100 ls_data-meins, 120 lv_subtotal_netpr.
+    ULINE.
+  ENDMETHOD.
+ENDCLASS.
+
+START-OF-SELECTION.
+  DATA: lr_report TYPE REF TO lcl_report.
+
+  SELECT-OPTIONS: s_ebeln FOR ekko-ebeln.
+
+  CREATE OBJECT lr_report.
+  lr_report->get_data( ).
+  lr_report->display_output( ).
+    </p>
+</body>
+</html>
