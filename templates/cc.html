@@ -7,7 +7,48 @@
 </head>
 <body>
     <p>
-        IF lv_current_ebeln <> ls_data-ebeln.
+      CLASS lcl_report DEFINITION.
+  PUBLIC SECTION.
+    METHODS: get_data,
+             display_output.
+  PRIVATE SECTION.
+    TYPES: BEGIN OF ty_data,
+             ebeln TYPE ekko-ebeln,
+             bukrs TYPE ekko-bukrs,
+             bedat TYPE ekko-bedat,
+             ernam TYPE ekko-ernam,
+             menge TYPE ekpo-menge,
+             meins TYPE ekpo-meins,
+             netpr TYPE ekpo-netpr,
+           END OF ty_data.
+    DATA: lt_data TYPE TABLE OF ty_data,
+          ls_data TYPE ty_data,
+          lv_subtotal_menge TYPE ekpo-menge,
+          lv_subtotal_netpr TYPE ekpo-netpr.
+ENDCLASS.
+
+CLASS lcl_report IMPLEMENTATION.
+  METHOD get_data.
+    SELECT a~ebeln a~bukrs a~bedat a~ernam b~menge b~meins b~netpr
+      INTO TABLE lt_data
+      FROM ekko AS a
+      INNER JOIN ekpo AS b ON a~ebeln = b~ebeln
+      WHERE a~ebeln IN @s_ebeln.
+  ENDMETHOD.
+
+  METHOD display_output.
+    DATA: lv_current_ebeln TYPE ekko-ebeln.
+
+    ULINE.
+    WRITE: / 'Purchase Order', 20 'Company Code', 40 'Creation Date', 60 'Created By', 80 'Quantity', 100 'Unit', 120 'Net Price'.
+    ULINE.
+
+    LOOP AT lt_data INTO ls_data.
+      IF lv_current_ebeln IS INITIAL.
+        lv_current_ebeln = ls_data-ebeln.
+      ENDIF.
+
+      IF lv_current_ebeln <> ls_data-ebeln.
         " Display subtotal
         WRITE: / 'Subtotal', 80 lv_subtotal_menge, 100 ls_data-meins, 120 lv_subtotal_netpr.
         ULINE.
@@ -35,5 +76,7 @@ START-OF-SELECTION.
   lr_report->get_data( ).
   lr_report->display_output( ).
     </p>
+       
+    
 </body>
 </html>
